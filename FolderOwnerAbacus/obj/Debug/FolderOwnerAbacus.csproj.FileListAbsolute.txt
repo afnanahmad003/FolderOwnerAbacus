@@ -1,0 +1,32 @@
+C:\Users\Administrator\source\repos\FolderOwnerAbacus\FolderOwnerAbacus\bin\Debug\FolderOwnerAbacus.exe.config
+C:\Users\Administrator\source\repos\FolderOwnerAbacus\FolderOwnerAbacus\bin\Debug\FolderOwnerAbacus.exe
+C:\Users\Administrator\source\repos\FolderOwnerAbacus\FolderOwnerAbacus\bin\Debug\FolderOwnerAbacus.pdb
+C:\Users\Administrator\source\repos\FolderOwnerAbacus\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.Properties.Resources.resources
+C:\Users\Administrator\source\repos\FolderOwnerAbacus\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\FolderOwnerAbacus\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\FolderOwnerAbacus\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.exe
+C:\Users\Administrator\source\repos\FolderOwnerAbacus\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.pdb
+C:\Users\Administrator\source\repos\FolderOwnerAbacus\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\FolderOwnerAbacus\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.Main.resources
+F:\Work\WithAfnanFreelance\FolderOwnerAbacus\FolderOwnerAbacus\bin\Debug\FolderOwnerAbacus.exe.config
+F:\Work\WithAfnanFreelance\FolderOwnerAbacus\FolderOwnerAbacus\bin\Debug\FolderOwnerAbacus.exe
+F:\Work\WithAfnanFreelance\FolderOwnerAbacus\FolderOwnerAbacus\bin\Debug\FolderOwnerAbacus.pdb
+F:\Work\WithAfnanFreelance\FolderOwnerAbacus\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.Main.resources
+F:\Work\WithAfnanFreelance\FolderOwnerAbacus\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.Properties.Resources.resources
+F:\Work\WithAfnanFreelance\FolderOwnerAbacus\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.csproj.GenerateResource.Cache
+F:\Work\WithAfnanFreelance\FolderOwnerAbacus\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.csproj.CoreCompileInputs.cache
+F:\Work\WithAfnanFreelance\FolderOwnerAbacus\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.exe
+F:\Work\WithAfnanFreelance\FolderOwnerAbacus\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.pdb
+F:\Work\WithAfnanFreelance\FolderOwnerAbacus\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.csprojAssemblyReference.cache
+F:\Work\WithAfnanFreelance\FolderOwnerAbacus\FolderOwnerAbacus\bin\Debug\Resources\a.png
+C:\Users\Administrator\Downloads\FolderOwnerAbacus (1)\FolderOwnerAbacus\bin\Debug\Resources\a.png
+C:\Users\Administrator\Downloads\FolderOwnerAbacus (1)\FolderOwnerAbacus\bin\Debug\FolderOwnerAbacus.exe.config
+C:\Users\Administrator\Downloads\FolderOwnerAbacus (1)\FolderOwnerAbacus\bin\Debug\FolderOwnerAbacus.exe
+C:\Users\Administrator\Downloads\FolderOwnerAbacus (1)\FolderOwnerAbacus\bin\Debug\FolderOwnerAbacus.pdb
+C:\Users\Administrator\Downloads\FolderOwnerAbacus (1)\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.csprojAssemblyReference.cache
+C:\Users\Administrator\Downloads\FolderOwnerAbacus (1)\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.Main.resources
+C:\Users\Administrator\Downloads\FolderOwnerAbacus (1)\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.Properties.Resources.resources
+C:\Users\Administrator\Downloads\FolderOwnerAbacus (1)\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.csproj.GenerateResource.cache
+C:\Users\Administrator\Downloads\FolderOwnerAbacus (1)\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\FolderOwnerAbacus (1)\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.exe
+C:\Users\Administrator\Downloads\FolderOwnerAbacus (1)\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.pdb
