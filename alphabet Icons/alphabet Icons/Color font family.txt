@@ -1,0 +1,11 @@
+7854f6 purple
+333333 black
+
+font family Century Gothic
+
+
+
+screen size
+
+1100px weight 
+820px  height
