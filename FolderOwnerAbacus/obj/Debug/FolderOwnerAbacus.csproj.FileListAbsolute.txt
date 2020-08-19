@@ -30,3 +30,14 @@ C:\Users\Administrator\Downloads\FolderOwnerAbacus (1)\FolderOwnerAbacus\obj\Deb
 C:\Users\Administrator\Downloads\FolderOwnerAbacus (1)\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\Downloads\FolderOwnerAbacus (1)\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.exe
 C:\Users\Administrator\Downloads\FolderOwnerAbacus (1)\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.pdb
+E:\Work\Others\FolderOwnerAbacus\FolderOwnerAbacus\bin\Debug\Resources\a.png
+E:\Work\Others\FolderOwnerAbacus\FolderOwnerAbacus\bin\Debug\FolderOwnerAbacus.exe.config
+E:\Work\Others\FolderOwnerAbacus\FolderOwnerAbacus\bin\Debug\FolderOwnerAbacus.exe
+E:\Work\Others\FolderOwnerAbacus\FolderOwnerAbacus\bin\Debug\FolderOwnerAbacus.pdb
+E:\Work\Others\FolderOwnerAbacus\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.csprojAssemblyReference.cache
+E:\Work\Others\FolderOwnerAbacus\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.Main.resources
+E:\Work\Others\FolderOwnerAbacus\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.Properties.Resources.resources
+E:\Work\Others\FolderOwnerAbacus\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.csproj.GenerateResource.cache
+E:\Work\Others\FolderOwnerAbacus\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.csproj.CoreCompileInputs.cache
+E:\Work\Others\FolderOwnerAbacus\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.exe
+E:\Work\Others\FolderOwnerAbacus\FolderOwnerAbacus\obj\Debug\FolderOwnerAbacus.pdb

@@ -117,15 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="dataGridViewImageColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Score.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="Avtar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -144,4 +135,35 @@
   <metadata name="dataGridViewTextBoxColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="dataGridViewImageColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Score.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label36.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACUAAAAkCAYAAAAOwvOmAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAA2pJREFUWEftlv1Pk1cYhv3jFNpSaCk0gpRaChQKKtOojG0KyoQlo3zVbiGjEqF0
+        xBEyK5sgxLCBxg9AiBDQbcjUjfkFY6zUfl47PSNN9kOTl6QhI+mbXL/cd94n9/u85zznHFBlHOT/RjqU
+        UtKhlJIOpZT9HCoDdaaZj9rcePq9eFwXqDmsRyc9I5Wnm7h8xYPX3UHzqVIKpK7FWHCCS19cZaD/Kj2O
+        WkqErk7UTI7CUBo0ahcTz/8mGI0RejfLYFUJZul9iHNgjpf+CBH/Cx55WqmTugnbiUHm3oWIRd6z9Wwc
+        l9C1iZrJURgqS4Tq5u7aNiERKrz5GF+1FYv0zvHlNwusBaJEA7/z+OtOzkvdTGWNj8XNMLHoe/wvf8Qt
+        9OxEzeTs4veV0dTjY3RsnNGBduqK8siVXiE15114fbcYu96H65NqiqSeTUFxrejiTW6PfY/vSiM2oWsS
+        NZOznxf63qIw1CGB+B3mEmzlZdgsBRi1qp1focZgLKSktJQKazGm/JyddZOBVmvAZLFSUW6lrNiI/j81
+        k6MwlAigOsfQwgaBcIzA6m26Kkwclp6dz3qm+Hk9RGj9KZPdjVRL3Yi1qouJX7eJhfysz1+TGyArUTM5
+        CkNli903zBN/mAjiib7gTo2NCuk56Bte5c+Y0GMbPPvWjUPq5Rw/dYffovEXwoQ2FxkWek6iZnJ20amz
+        DMyty05t/zKK01aEUXplfOr+gSdvRafeLDHR1SB3mSojD4vdyfiKX3bq7Uw/tUJPYafiZJKj05Fv0JOv
+        15KtEmNC6vG1o8WQK/TcHPSJtXZIfIgavV7o4p08nUZRoDi7CLV37OdQmahVVbQPTTE9O8fDkW4azEYM
+        0jNxprmX7yZnmJ28Qe+lkxyVuo4jlnp6Rh4wP3ufqUGH3JUpnOjxs6+P6TcBQmKXRfzLjBwrxSq9i3w1
+        tMzroDj7gq9YuuaiUeoW7B+M8FQc1MJg+497eISewrNP3BJUrdxa2SIYiRF8dR+v/Sgm6Z2m3TvD8y0x
+        Lv5aZbr3c85I/Qjlx7w8fB0Ut4QAmz/dpFXoKbwlxA/kQk5eaKHT6aSz6SyVYnL/O3NysVbX0eTo4HLL
+        RT62F++MCo2Y9DbqmttwOdtorT8uPyKF96m9JR1KKelQSkmHUko6lFLSoZRxkH8Aq3MzeIUHnD0AAAAA
+        SUVORK5CYII=
+</value>
+  </data>
 </root>

@@ -605,8 +605,13 @@ namespace FolderOwnerAbacus
                 base.BeginInvoke(new DAddLog(this.AddLogs), new object[] { exp.Message + exp.StackTrace });
             }
         }
-	}
-	public class ACL
+
+        private void tpOverview_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+    public class ACL
     {
         public string FileName { get; set; }
         public List<ACLScore> ACLScore { get; set; }
