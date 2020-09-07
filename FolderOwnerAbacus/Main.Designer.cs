@@ -30,15 +30,15 @@ namespace FolderOwnerAbacus
 		/// </summary>
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.lblFullControl = new System.Windows.Forms.Label();
             this.tbFullControl = new System.Windows.Forms.TextBox();
@@ -75,9 +75,12 @@ namespace FolderOwnerAbacus
             this.TabControl = new System.Windows.Forms.TabControl();
             this.tpOverview = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.lblUNCPath = new System.Windows.Forms.Label();
             this.tbUNCPath = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.label39 = new System.Windows.Forms.Label();
             this.dgvActivity = new System.Windows.Forms.DataGridView();
             this.Avtar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -128,6 +131,7 @@ namespace FolderOwnerAbacus
             this.txtActivityTopRecords = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label40 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -140,6 +144,7 @@ namespace FolderOwnerAbacus
             this.label20 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.label41 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
@@ -153,6 +158,7 @@ namespace FolderOwnerAbacus
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label36 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.TabControl.SuspendLayout();
             this.tpOverview.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -177,7 +183,7 @@ namespace FolderOwnerAbacus
             // 
             this.lblFullControl.AutoSize = true;
             this.lblFullControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFullControl.Location = new System.Drawing.Point(85, 244);
+            this.lblFullControl.Location = new System.Drawing.Point(66, 244);
             this.lblFullControl.Name = "lblFullControl";
             this.lblFullControl.Size = new System.Drawing.Size(79, 17);
             this.lblFullControl.TabIndex = 218;
@@ -185,7 +191,7 @@ namespace FolderOwnerAbacus
             // 
             // tbFullControl
             // 
-            this.tbFullControl.Location = new System.Drawing.Point(172, 241);
+            this.tbFullControl.Location = new System.Drawing.Point(153, 241);
             this.tbFullControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbFullControl.MaxLength = 100;
             this.tbFullControl.Name = "tbFullControl";
@@ -196,7 +202,7 @@ namespace FolderOwnerAbacus
             // 
             // tbTakeOwnership
             // 
-            this.tbTakeOwnership.Location = new System.Drawing.Point(590, 142);
+            this.tbTakeOwnership.Location = new System.Drawing.Point(508, 142);
             this.tbTakeOwnership.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbTakeOwnership.MaxLength = 100;
             this.tbTakeOwnership.Name = "tbTakeOwnership";
@@ -209,7 +215,7 @@ namespace FolderOwnerAbacus
             // 
             this.lblTakeOwnership.AutoSize = true;
             this.lblTakeOwnership.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTakeOwnership.Location = new System.Drawing.Point(467, 145);
+            this.lblTakeOwnership.Location = new System.Drawing.Point(385, 145);
             this.lblTakeOwnership.Name = "lblTakeOwnership";
             this.lblTakeOwnership.Size = new System.Drawing.Size(111, 17);
             this.lblTakeOwnership.TabIndex = 211;
@@ -219,7 +225,7 @@ namespace FolderOwnerAbacus
             // 
             this.lblChangePassword.AutoSize = true;
             this.lblChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChangePassword.Location = new System.Drawing.Point(441, 94);
+            this.lblChangePassword.Location = new System.Drawing.Point(359, 94);
             this.lblChangePassword.Name = "lblChangePassword";
             this.lblChangePassword.Size = new System.Drawing.Size(137, 17);
             this.lblChangePassword.TabIndex = 210;
@@ -235,7 +241,7 @@ namespace FolderOwnerAbacus
             // 
             // tbChangePermissions
             // 
-            this.tbChangePermissions.Location = new System.Drawing.Point(590, 91);
+            this.tbChangePermissions.Location = new System.Drawing.Point(508, 91);
             this.tbChangePermissions.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbChangePermissions.MaxLength = 100;
             this.tbChangePermissions.Name = "tbChangePermissions";
@@ -248,7 +254,7 @@ namespace FolderOwnerAbacus
             // 
             this.lblModify.AutoSize = true;
             this.lblModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModify.Location = new System.Drawing.Point(115, 193);
+            this.lblModify.Location = new System.Drawing.Point(96, 193);
             this.lblModify.Name = "lblModify";
             this.lblModify.Size = new System.Drawing.Size(49, 17);
             this.lblModify.TabIndex = 207;
@@ -256,7 +262,7 @@ namespace FolderOwnerAbacus
             // 
             // tbModify
             // 
-            this.tbModify.Location = new System.Drawing.Point(172, 190);
+            this.tbModify.Location = new System.Drawing.Point(153, 190);
             this.tbModify.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbModify.MaxLength = 100;
             this.tbModify.Name = "tbModify";
@@ -267,7 +273,7 @@ namespace FolderOwnerAbacus
             // 
             // tbReadAndExecute
             // 
-            this.tbReadAndExecute.Location = new System.Drawing.Point(590, 337);
+            this.tbReadAndExecute.Location = new System.Drawing.Point(508, 337);
             this.tbReadAndExecute.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbReadAndExecute.MaxLength = 100;
             this.tbReadAndExecute.Name = "tbReadAndExecute";
@@ -280,7 +286,7 @@ namespace FolderOwnerAbacus
             // 
             this.lblReadAndExecute.AutoSize = true;
             this.lblReadAndExecute.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReadAndExecute.Location = new System.Drawing.Point(453, 340);
+            this.lblReadAndExecute.Location = new System.Drawing.Point(371, 340);
             this.lblReadAndExecute.Name = "lblReadAndExecute";
             this.lblReadAndExecute.Size = new System.Drawing.Size(125, 17);
             this.lblReadAndExecute.TabIndex = 203;
@@ -290,7 +296,7 @@ namespace FolderOwnerAbacus
             // 
             this.lblRead.AutoSize = true;
             this.lblRead.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRead.Location = new System.Drawing.Point(522, 47);
+            this.lblRead.Location = new System.Drawing.Point(440, 47);
             this.lblRead.Name = "lblRead";
             this.lblRead.Size = new System.Drawing.Size(42, 17);
             this.lblRead.TabIndex = 202;
@@ -306,7 +312,7 @@ namespace FolderOwnerAbacus
             // 
             // tbRead
             // 
-            this.tbRead.Location = new System.Drawing.Point(590, 44);
+            this.tbRead.Location = new System.Drawing.Point(508, 44);
             this.tbRead.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbRead.MaxLength = 100;
             this.tbRead.Name = "tbRead";
@@ -317,7 +323,7 @@ namespace FolderOwnerAbacus
             // 
             // tbDelete
             // 
-            this.tbDelete.Location = new System.Drawing.Point(590, 289);
+            this.tbDelete.Location = new System.Drawing.Point(508, 289);
             this.tbDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbDelete.MaxLength = 100;
             this.tbDelete.Name = "tbDelete";
@@ -328,7 +334,7 @@ namespace FolderOwnerAbacus
             // 
             // tbWrite
             // 
-            this.tbWrite.Location = new System.Drawing.Point(590, 241);
+            this.tbWrite.Location = new System.Drawing.Point(508, 241);
             this.tbWrite.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbWrite.MaxLength = 100;
             this.tbWrite.Name = "tbWrite";
@@ -341,7 +347,7 @@ namespace FolderOwnerAbacus
             // 
             this.lblDelete.AutoSize = true;
             this.lblDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDelete.Location = new System.Drawing.Point(529, 292);
+            this.lblDelete.Location = new System.Drawing.Point(447, 292);
             this.lblDelete.Name = "lblDelete";
             this.lblDelete.Size = new System.Drawing.Size(49, 17);
             this.lblDelete.TabIndex = 192;
@@ -351,7 +357,7 @@ namespace FolderOwnerAbacus
             // 
             this.lblWrite.AutoSize = true;
             this.lblWrite.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWrite.Location = new System.Drawing.Point(537, 244);
+            this.lblWrite.Location = new System.Drawing.Point(455, 244);
             this.lblWrite.Name = "lblWrite";
             this.lblWrite.Size = new System.Drawing.Size(41, 17);
             this.lblWrite.TabIndex = 190;
@@ -361,7 +367,7 @@ namespace FolderOwnerAbacus
             // 
             this.lblDeleteSubDirectoriesAndFiles.AutoSize = true;
             this.lblDeleteSubDirectoriesAndFiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeleteSubDirectoriesAndFiles.Location = new System.Drawing.Point(372, 193);
+            this.lblDeleteSubDirectoriesAndFiles.Location = new System.Drawing.Point(290, 193);
             this.lblDeleteSubDirectoriesAndFiles.Name = "lblDeleteSubDirectoriesAndFiles";
             this.lblDeleteSubDirectoriesAndFiles.Size = new System.Drawing.Size(206, 17);
             this.lblDeleteSubDirectoriesAndFiles.TabIndex = 187;
@@ -369,7 +375,7 @@ namespace FolderOwnerAbacus
             // 
             // tbDeleteSubdirectories
             // 
-            this.tbDeleteSubdirectories.Location = new System.Drawing.Point(590, 190);
+            this.tbDeleteSubdirectories.Location = new System.Drawing.Point(508, 190);
             this.tbDeleteSubdirectories.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbDeleteSubdirectories.MaxLength = 100;
             this.tbDeleteSubdirectories.Name = "tbDeleteSubdirectories";
@@ -380,7 +386,7 @@ namespace FolderOwnerAbacus
             // 
             // tbReadData
             // 
-            this.tbReadData.Location = new System.Drawing.Point(172, 44);
+            this.tbReadData.Location = new System.Drawing.Point(153, 44);
             this.tbReadData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbReadData.MaxLength = 100;
             this.tbReadData.Name = "tbReadData";
@@ -391,7 +397,7 @@ namespace FolderOwnerAbacus
             // 
             // tbExecuteFile
             // 
-            this.tbExecuteFile.Location = new System.Drawing.Point(172, 337);
+            this.tbExecuteFile.Location = new System.Drawing.Point(153, 337);
             this.tbExecuteFile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbExecuteFile.MaxLength = 100;
             this.tbExecuteFile.Name = "tbExecuteFile";
@@ -404,7 +410,7 @@ namespace FolderOwnerAbacus
             // 
             this.lblExecuteFile.AutoSize = true;
             this.lblExecuteFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExecuteFile.Location = new System.Drawing.Point(80, 340);
+            this.lblExecuteFile.Location = new System.Drawing.Point(61, 340);
             this.lblExecuteFile.Name = "lblExecuteFile";
             this.lblExecuteFile.Size = new System.Drawing.Size(84, 17);
             this.lblExecuteFile.TabIndex = 177;
@@ -414,7 +420,7 @@ namespace FolderOwnerAbacus
             // 
             this.lblCreateDirectories.AutoSize = true;
             this.lblCreateDirectories.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCreateDirectories.Location = new System.Drawing.Point(42, 292);
+            this.lblCreateDirectories.Location = new System.Drawing.Point(23, 292);
             this.lblCreateDirectories.Name = "lblCreateDirectories";
             this.lblCreateDirectories.Size = new System.Drawing.Size(122, 17);
             this.lblCreateDirectories.TabIndex = 171;
@@ -424,7 +430,7 @@ namespace FolderOwnerAbacus
             // 
             this.lblCreateFiles.AutoSize = true;
             this.lblCreateFiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCreateFiles.Location = new System.Drawing.Point(77, 145);
+            this.lblCreateFiles.Location = new System.Drawing.Point(58, 145);
             this.lblCreateFiles.Name = "lblCreateFiles";
             this.lblCreateFiles.Size = new System.Drawing.Size(87, 17);
             this.lblCreateFiles.TabIndex = 166;
@@ -432,7 +438,7 @@ namespace FolderOwnerAbacus
             // 
             // tbCreateFiles
             // 
-            this.tbCreateFiles.Location = new System.Drawing.Point(172, 142);
+            this.tbCreateFiles.Location = new System.Drawing.Point(153, 142);
             this.tbCreateFiles.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbCreateFiles.MaxLength = 100;
             this.tbCreateFiles.Name = "tbCreateFiles";
@@ -445,7 +451,7 @@ namespace FolderOwnerAbacus
             // 
             this.lblWriteData.AutoSize = true;
             this.lblWriteData.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWriteData.Location = new System.Drawing.Point(89, 94);
+            this.lblWriteData.Location = new System.Drawing.Point(70, 94);
             this.lblWriteData.Name = "lblWriteData";
             this.lblWriteData.Size = new System.Drawing.Size(75, 17);
             this.lblWriteData.TabIndex = 164;
@@ -453,7 +459,7 @@ namespace FolderOwnerAbacus
             // 
             // tbWriteData
             // 
-            this.tbWriteData.Location = new System.Drawing.Point(172, 91);
+            this.tbWriteData.Location = new System.Drawing.Point(153, 91);
             this.tbWriteData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbWriteData.MaxLength = 100;
             this.tbWriteData.Name = "tbWriteData";
@@ -466,7 +472,7 @@ namespace FolderOwnerAbacus
             // 
             this.lblReadData.AutoSize = true;
             this.lblReadData.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReadData.Location = new System.Drawing.Point(88, 47);
+            this.lblReadData.Location = new System.Drawing.Point(69, 47);
             this.lblReadData.Name = "lblReadData";
             this.lblReadData.Size = new System.Drawing.Size(76, 17);
             this.lblReadData.TabIndex = 131;
@@ -474,7 +480,7 @@ namespace FolderOwnerAbacus
             // 
             // tbCreateDirectories
             // 
-            this.tbCreateDirectories.Location = new System.Drawing.Point(172, 289);
+            this.tbCreateDirectories.Location = new System.Drawing.Point(153, 289);
             this.tbCreateDirectories.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbCreateDirectories.MaxLength = 100;
             this.tbCreateDirectories.Name = "tbCreateDirectories";
@@ -489,7 +495,7 @@ namespace FolderOwnerAbacus
             this.lstLogs.FormattingEnabled = true;
             this.lstLogs.Location = new System.Drawing.Point(4, 39);
             this.lstLogs.Name = "lstLogs";
-            this.lstLogs.Size = new System.Drawing.Size(1210, 563);
+            this.lstLogs.Size = new System.Drawing.Size(1077, 563);
             this.lstLogs.TabIndex = 179;
             // 
             // btnStart
@@ -498,7 +504,7 @@ namespace FolderOwnerAbacus
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnStart.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(188)))), ((int)(((byte)(194)))));
-            this.btnStart.Location = new System.Drawing.Point(862, 29);
+            this.btnStart.Location = new System.Drawing.Point(816, 12);
             this.btnStart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(136, 29);
@@ -539,20 +545,46 @@ namespace FolderOwnerAbacus
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
+            this.panel9.Controls.Add(this.progressBar);
+            this.panel9.Controls.Add(this.btnCancel);
             this.panel9.Controls.Add(this.lblUNCPath);
             this.panel9.Controls.Add(this.tbUNCPath);
             this.panel9.Controls.Add(this.btnStart);
             this.panel9.Location = new System.Drawing.Point(16, 13);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1206, 82);
+            this.panel9.Size = new System.Drawing.Size(1092, 82);
             this.panel9.TabIndex = 181;
+            // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(161, 46);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(247, 23);
+            this.progressBar.TabIndex = 182;
+            this.progressBar.Visible = false;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancel.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.Red;
+            this.btnCancel.Location = new System.Drawing.Point(417, 44);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(74, 25);
+            this.btnCancel.TabIndex = 181;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Visible = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lblUNCPath
             // 
             this.lblUNCPath.AutoSize = true;
             this.lblUNCPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lblUNCPath.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
-            this.lblUNCPath.Location = new System.Drawing.Point(89, 33);
+            this.lblUNCPath.Location = new System.Drawing.Point(43, 16);
             this.lblUNCPath.Name = "lblUNCPath";
             this.lblUNCPath.Size = new System.Drawing.Size(100, 20);
             this.lblUNCPath.TabIndex = 180;
@@ -561,7 +593,7 @@ namespace FolderOwnerAbacus
             // tbUNCPath
             // 
             this.tbUNCPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUNCPath.Location = new System.Drawing.Point(207, 30);
+            this.tbUNCPath.Location = new System.Drawing.Point(161, 13);
             this.tbUNCPath.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbUNCPath.MaxLength = 100;
             this.tbUNCPath.Name = "tbUNCPath";
@@ -572,14 +604,27 @@ namespace FolderOwnerAbacus
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Controls.Add(this.label39);
             this.panel8.Controls.Add(this.dgvActivity);
             this.panel8.Controls.Add(this.label15);
             this.panel8.Controls.Add(this.label16);
             this.panel8.Controls.Add(this.label17);
-            this.panel8.Location = new System.Drawing.Point(852, 112);
+            this.panel8.Location = new System.Drawing.Point(798, 112);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(375, 522);
+            this.panel8.Size = new System.Drawing.Size(310, 522);
             this.panel8.TabIndex = 186;
+            // 
+            // label39
+            // 
+            this.label39.BackColor = System.Drawing.Color.Transparent;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
+            this.label39.Location = new System.Drawing.Point(258, -12);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(46, 43);
+            this.label39.TabIndex = 5;
+            this.label39.Text = "...";
+            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dgvActivity
             // 
@@ -591,44 +636,44 @@ namespace FolderOwnerAbacus
             this.dgvActivity.BackgroundColor = System.Drawing.Color.White;
             this.dgvActivity.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvActivity.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvActivity.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvActivity.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvActivity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvActivity.ColumnHeadersVisible = false;
             this.dgvActivity.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Avtar,
             this.Username,
             this.FilesCount});
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvActivity.DefaultCellStyle = dataGridViewCellStyle29;
-            this.dgvActivity.Location = new System.Drawing.Point(4, 44);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvActivity.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvActivity.Location = new System.Drawing.Point(3, 44);
             this.dgvActivity.MultiSelect = false;
             this.dgvActivity.Name = "dgvActivity";
             this.dgvActivity.ReadOnly = true;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvActivity.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvActivity.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvActivity.RowHeadersVisible = false;
             this.dgvActivity.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvActivity.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvActivity.Size = new System.Drawing.Size(366, 471);
+            this.dgvActivity.Size = new System.Drawing.Size(301, 471);
             this.dgvActivity.TabIndex = 1;
             // 
             // Avtar
@@ -699,7 +744,7 @@ namespace FolderOwnerAbacus
             this.panel7.Controls.Add(this.label14);
             this.panel7.Location = new System.Drawing.Point(16, 112);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(430, 148);
+            this.panel7.Size = new System.Drawing.Size(408, 148);
             this.panel7.TabIndex = 183;
             // 
             // lblDirOwnerName
@@ -717,7 +762,7 @@ namespace FolderOwnerAbacus
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
-            this.label12.Location = new System.Drawing.Point(374, -12);
+            this.label12.Location = new System.Drawing.Point(355, -12);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(46, 43);
             this.label12.TabIndex = 4;
@@ -762,7 +807,7 @@ namespace FolderOwnerAbacus
             this.panel6.Controls.Add(this.label10);
             this.panel6.Location = new System.Drawing.Point(16, 286);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(430, 348);
+            this.panel6.Size = new System.Drawing.Size(408, 348);
             this.panel6.TabIndex = 182;
             // 
             // dgvSuggestedOwner
@@ -775,44 +820,44 @@ namespace FolderOwnerAbacus
             this.dgvSuggestedOwner.BackgroundColor = System.Drawing.Color.White;
             this.dgvSuggestedOwner.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvSuggestedOwner.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSuggestedOwner.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSuggestedOwner.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvSuggestedOwner.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSuggestedOwner.ColumnHeadersVisible = false;
             this.dgvSuggestedOwner.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewImageColumn3,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSuggestedOwner.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSuggestedOwner.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvSuggestedOwner.Location = new System.Drawing.Point(6, 43);
             this.dgvSuggestedOwner.MultiSelect = false;
             this.dgvSuggestedOwner.Name = "dgvSuggestedOwner";
             this.dgvSuggestedOwner.ReadOnly = true;
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle33.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSuggestedOwner.RowHeadersDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSuggestedOwner.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvSuggestedOwner.RowHeadersVisible = false;
             this.dgvSuggestedOwner.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvSuggestedOwner.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSuggestedOwner.Size = new System.Drawing.Size(418, 297);
+            this.dgvSuggestedOwner.Size = new System.Drawing.Size(396, 297);
             this.dgvSuggestedOwner.TabIndex = 6;
             // 
             // dataGridViewImageColumn3
@@ -847,7 +892,7 @@ namespace FolderOwnerAbacus
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
-            this.label8.Location = new System.Drawing.Point(374, -12);
+            this.label8.Location = new System.Drawing.Point(355, -12);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(46, 43);
             this.label8.TabIndex = 4;
@@ -880,9 +925,9 @@ namespace FolderOwnerAbacus
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.dgvACLScore);
-            this.panel5.Location = new System.Drawing.Point(466, 112);
+            this.panel5.Location = new System.Drawing.Point(433, 112);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(375, 522);
+            this.panel5.Size = new System.Drawing.Size(355, 522);
             this.panel5.TabIndex = 181;
             // 
             // label7
@@ -890,7 +935,7 @@ namespace FolderOwnerAbacus
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
-            this.label7.Location = new System.Drawing.Point(319, -12);
+            this.label7.Location = new System.Drawing.Point(303, -12);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(46, 43);
             this.label7.TabIndex = 4;
@@ -926,44 +971,44 @@ namespace FolderOwnerAbacus
             this.dgvACLScore.BackgroundColor = System.Drawing.Color.White;
             this.dgvACLScore.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvACLScore.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle34.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvACLScore.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvACLScore.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvACLScore.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvACLScore.ColumnHeadersVisible = false;
             this.dgvACLScore.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewImageColumn1,
             this.dataGridViewTextBoxColumn1,
             this.Score});
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle35.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvACLScore.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvACLScore.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvACLScore.Location = new System.Drawing.Point(6, 44);
             this.dgvACLScore.MultiSelect = false;
             this.dgvACLScore.Name = "dgvACLScore";
             this.dgvACLScore.ReadOnly = true;
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle36.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvACLScore.RowHeadersDefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvACLScore.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvACLScore.RowHeadersVisible = false;
             this.dgvACLScore.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvACLScore.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvACLScore.Size = new System.Drawing.Size(363, 471);
+            this.dgvACLScore.Size = new System.Drawing.Size(343, 471);
             this.dgvACLScore.TabIndex = 1;
             // 
             // dataGridViewImageColumn1
@@ -1021,7 +1066,7 @@ namespace FolderOwnerAbacus
             this.panel4.Controls.Add(this.label28);
             this.panel4.Location = new System.Drawing.Point(16, 13);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(519, 186);
+            this.panel4.Size = new System.Drawing.Size(473, 186);
             this.panel4.TabIndex = 221;
             // 
             // label29
@@ -1029,7 +1074,7 @@ namespace FolderOwnerAbacus
             this.label29.BackColor = System.Drawing.Color.Transparent;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
-            this.label29.Location = new System.Drawing.Point(463, -12);
+            this.label29.Location = new System.Drawing.Point(420, -12);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(46, 43);
             this.label29.TabIndex = 231;
@@ -1069,7 +1114,7 @@ namespace FolderOwnerAbacus
             // 
             this.tbPassword.Location = new System.Drawing.Point(134, 125);
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(348, 23);
+            this.tbPassword.Size = new System.Drawing.Size(289, 23);
             this.tbPassword.TabIndex = 3;
             // 
             // tbUsername
@@ -1078,7 +1123,7 @@ namespace FolderOwnerAbacus
             this.tbUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbUsername.MaxLength = 100;
             this.tbUsername.Name = "tbUsername";
-            this.tbUsername.Size = new System.Drawing.Size(348, 23);
+            this.tbUsername.Size = new System.Drawing.Size(289, 23);
             this.tbUsername.TabIndex = 2;
             // 
             // tbDomainName
@@ -1087,7 +1132,7 @@ namespace FolderOwnerAbacus
             this.tbDomainName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbDomainName.MaxLength = 100;
             this.tbDomainName.Name = "tbDomainName";
-            this.tbDomainName.Size = new System.Drawing.Size(348, 23);
+            this.tbDomainName.Size = new System.Drawing.Size(289, 23);
             this.tbDomainName.TabIndex = 1;
             // 
             // lblDomainName
@@ -1123,7 +1168,7 @@ namespace FolderOwnerAbacus
             this.panel3.Controls.Add(this.label6);
             this.panel3.Location = new System.Drawing.Point(16, 220);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(519, 274);
+            this.panel3.Size = new System.Drawing.Size(473, 274);
             this.panel3.TabIndex = 220;
             // 
             // label32
@@ -1139,7 +1184,7 @@ namespace FolderOwnerAbacus
             this.label33.BackColor = System.Drawing.Color.Transparent;
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
-            this.label33.Location = new System.Drawing.Point(463, -13);
+            this.label33.Location = new System.Drawing.Point(420, -13);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(46, 43);
             this.label33.TabIndex = 234;
@@ -1150,7 +1195,7 @@ namespace FolderOwnerAbacus
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(287, 65);
+            this.label2.Location = new System.Drawing.Point(265, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 17);
             this.label2.TabIndex = 162;
@@ -1177,7 +1222,7 @@ namespace FolderOwnerAbacus
             // 
             // txtACLTopRecords
             // 
-            this.txtACLTopRecords.Location = new System.Drawing.Point(134, 62);
+            this.txtACLTopRecords.Location = new System.Drawing.Point(112, 62);
             this.txtACLTopRecords.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtACLTopRecords.MaxLength = 100;
             this.txtACLTopRecords.Name = "txtACLTopRecords";
@@ -1188,7 +1233,7 @@ namespace FolderOwnerAbacus
             // 
             // txtActivityTopRecords
             // 
-            this.txtActivityTopRecords.Location = new System.Drawing.Point(362, 62);
+            this.txtActivityTopRecords.Location = new System.Drawing.Point(340, 62);
             this.txtActivityTopRecords.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtActivityTopRecords.MaxLength = 100;
             this.txtActivityTopRecords.Name = "txtActivityTopRecords";
@@ -1201,7 +1246,7 @@ namespace FolderOwnerAbacus
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(73, 65);
+            this.label6.Location = new System.Drawing.Point(51, 65);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 17);
             this.label6.TabIndex = 131;
@@ -1210,6 +1255,7 @@ namespace FolderOwnerAbacus
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.label40);
             this.panel2.Controls.Add(this.label27);
             this.panel2.Controls.Add(this.label26);
             this.panel2.Controls.Add(this.label25);
@@ -1250,15 +1296,27 @@ namespace FolderOwnerAbacus
             this.panel2.Controls.Add(this.tbRead);
             this.panel2.Controls.Add(this.lblExecuteFile);
             this.panel2.Controls.Add(this.tbExecuteFile);
-            this.panel2.Location = new System.Drawing.Point(549, 13);
+            this.panel2.Location = new System.Drawing.Point(504, 13);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(689, 481);
+            this.panel2.Size = new System.Drawing.Size(590, 481);
             this.panel2.TabIndex = 219;
+            // 
+            // label40
+            // 
+            this.label40.BackColor = System.Drawing.Color.Transparent;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
+            this.label40.Location = new System.Drawing.Point(536, -12);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(46, 43);
+            this.label40.TabIndex = 232;
+            this.label40.Text = "...";
+            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label27
             // 
             this.label27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
-            this.label27.Location = new System.Drawing.Point(323, 57);
+            this.label27.Location = new System.Drawing.Point(259, 57);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(2, 284);
             this.label27.TabIndex = 228;
@@ -1268,7 +1326,7 @@ namespace FolderOwnerAbacus
             this.label26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.label26.Location = new System.Drawing.Point(3, 322);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(682, 1);
+            this.label26.Size = new System.Drawing.Size(591, 1);
             this.label26.TabIndex = 227;
             // 
             // label25
@@ -1276,7 +1334,7 @@ namespace FolderOwnerAbacus
             this.label25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.label25.Location = new System.Drawing.Point(3, 274);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(682, 1);
+            this.label25.Size = new System.Drawing.Size(591, 1);
             this.label25.TabIndex = 226;
             // 
             // label24
@@ -1284,7 +1342,7 @@ namespace FolderOwnerAbacus
             this.label24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.label24.Location = new System.Drawing.Point(3, 223);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(682, 1);
+            this.label24.Size = new System.Drawing.Size(591, 1);
             this.label24.TabIndex = 225;
             // 
             // label22
@@ -1292,7 +1350,7 @@ namespace FolderOwnerAbacus
             this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.label22.Location = new System.Drawing.Point(3, 175);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(682, 1);
+            this.label22.Size = new System.Drawing.Size(591, 1);
             this.label22.TabIndex = 224;
             // 
             // label1
@@ -1300,7 +1358,7 @@ namespace FolderOwnerAbacus
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.label1.Location = new System.Drawing.Point(3, 124);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(682, 1);
+            this.label1.Size = new System.Drawing.Size(591, 1);
             this.label1.TabIndex = 223;
             // 
             // label21
@@ -1308,7 +1366,7 @@ namespace FolderOwnerAbacus
             this.label21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.label21.Location = new System.Drawing.Point(3, 74);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(682, 1);
+            this.label21.Size = new System.Drawing.Size(591, 1);
             this.label21.TabIndex = 222;
             // 
             // label11
@@ -1356,14 +1414,27 @@ namespace FolderOwnerAbacus
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.White;
+            this.panel10.Controls.Add(this.label41);
             this.panel10.Controls.Add(this.label3);
             this.panel10.Controls.Add(this.lstLogs);
             this.panel10.Controls.Add(this.label37);
             this.panel10.Controls.Add(this.label38);
-            this.panel10.Location = new System.Drawing.Point(16, 13);
+            this.panel10.Location = new System.Drawing.Point(11, 13);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1219, 618);
+            this.panel10.Size = new System.Drawing.Size(1087, 618);
             this.panel10.TabIndex = 222;
+            // 
+            // label41
+            // 
+            this.label41.BackColor = System.Drawing.Color.Transparent;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
+            this.label41.Location = new System.Drawing.Point(1035, -5);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(46, 43);
+            this.label41.TabIndex = 232;
+            this.label41.Text = "...";
+            this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -1535,7 +1606,7 @@ namespace FolderOwnerAbacus
             this.label36.ForeColor = System.Drawing.Color.White;
             this.label36.Image = ((System.Drawing.Image)(resources.GetObject("label36.Image")));
             this.label36.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label36.Location = new System.Drawing.Point(7, 5);
+            this.label36.Location = new System.Drawing.Point(-7, 5);
             this.label36.Name = "label36";
             this.label36.Padding = new System.Windows.Forms.Padding(20, 0, 38, 0);
             this.label36.Size = new System.Drawing.Size(230, 37);
@@ -1543,12 +1614,18 @@ namespace FolderOwnerAbacus
             this.label36.Text = "EnterprizID";
             this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.WorkerSupportsCancellation = true;
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1456, 695);
+            this.ClientSize = new System.Drawing.Size(1330, 691);
             this.Controls.Add(this.label36);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
@@ -1705,6 +1782,12 @@ namespace FolderOwnerAbacus
         private Label label37;
         private Label label38;
         private Label label36;
+        private Label label39;
+        private Label label40;
+        private Label label41;
+        private Button btnCancel;
+        private ProgressBar progressBar;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

@@ -24,6 +24,7 @@ namespace FolderOwnerAbacus
         private int topACL = 0;
         private int topActivity = 0;
 
+        public bool CancelProcess = false;
         public Main()
         {
 
@@ -166,14 +167,25 @@ namespace FolderOwnerAbacus
 
                 topACL = Convert.ToInt32(txtACLTopRecords.Text.Trim());
                 topActivity = Convert.ToInt32(txtActivityTopRecords.Text.Trim());
-                this.Cursor = Cursors.WaitCursor;
-                StartACLProcessing();
+                //this.Cursor = Cursors.WaitCursor;
+                //btnCancel.Visible = true;
+                progressBar.Visible = true;
+                btnCancel.Invoke((MethodInvoker)delegate () { btnCancel.Visible  = true; });
+                //StartACLProcessing();
+                if (backgroundWorker1 == null)
+                {
+                    backgroundWorker1 = new BackgroundWorker();
+                    backgroundWorker1.DoWork += backgroundWorker1_DoWork;
+                    backgroundWorker1.RunWorkerCompleted += backgroundWorker1_RunWorkerCompleted;
+                    backgroundWorker1.WorkerSupportsCancellation = true;
+                }
+                backgroundWorker1.RunWorkerAsync();
             }
             catch (Exception ex)
             {
 
             }
-            this.Cursor = Cursors.Default;
+            //this.Cursor = Cursors.Default;
         }
 
         private void textBox_TextChanged(object sender, EventArgs e)
@@ -189,6 +201,8 @@ namespace FolderOwnerAbacus
 
         private void StartACLProcessing()
         {
+//            Application.DoEvents();
+           
             Dictionary<string, int> diActivity = new Dictionary<string, int>();
             int TotalFileProcessed = 0;
             DataTable dTACLScoring = new DataTable();
@@ -207,7 +221,9 @@ namespace FolderOwnerAbacus
                 base.BeginInvoke(new DAddLog(this.AddLogs), new object[] { "Tota number of files found [" + files.Count() + "]" });
                 base.BeginInvoke(new DAddLog(this.AddLogs), new object[] { "Now going to connect with your domain if you want to know Universal principle name of an owner." });
 
-                UserPrincipal DirectoryUser = null;
+                progressBar.Value = 10;
+
+               UserPrincipal DirectoryUser = null;
                 PrincipalContext PrincipalContext = null;
                 string OwnerofDirectory = string.Empty;
                 try
@@ -225,25 +241,30 @@ namespace FolderOwnerAbacus
                     base.BeginInvoke(new DAddLog(this.AddLogs), new object[] { "Faile to get the Universal Principle Name of an Owner using provided Domain." });
                     base.BeginInvoke(new DAddLog(this.AddLogs), new object[] { exp.Message });
                 }
+                if (CancelProcess) return;
+                progressBar.Value = 20;
 
                 var DCL = DirInfo.GetAccessControl();
                 OwnerofDirectory = DCL.GetOwner(typeof(System.Security.Principal.NTAccount)).ToString();
 
                 lblDirOwnerName.Text = OwnerofDirectory;
 				lblDirOwnerPic.Image = GetImage(OwnerofDirectory);
+                if (CancelProcess) return;
+                progressBar.Value = 25;
 
-
-
-				if (DirectoryUser == null & tbDomainName.Text.Trim() != string.Empty)
+                if (DirectoryUser == null & tbDomainName.Text.Trim() != string.Empty)
                     base.BeginInvoke(new DAddLog(this.AddLogs), new object[] { "Could not get the Universal Principle Name of an Owner using provided Domain." });
 
                 base.BeginInvoke(new DAddLog(this.AddLogs), new object[] { "However, the NT Account name of an expected Owner is [" + OwnerofDirectory + "]" });
                 base.BeginInvoke(new DAddLog(this.AddLogs), new object[] { "Now, application will start executing all files inside selected folder." });
 
                 List<ACL> liACL = new List<ACL>();
+                if (CancelProcess) return;
+                progressBar.Value = 30;
 
                 foreach (var f in files)
                 {
+                    if (CancelProcess) return;
                     ACL objACL = new ACL();
 
                     objACL.FileName = f.Name;
@@ -275,6 +296,7 @@ namespace FolderOwnerAbacus
 
                     foreach (FileSystemAccessRule rule in ACLControl.GetAccessRules(true, true, typeof(System.Security.Principal.NTAccount)))
                     {
+                        if (CancelProcess) return;
                         base.BeginInvoke(new DAddLog(this.AddLogs), new object[] { "Calculating ACL now." });
                         try
                         {
@@ -286,25 +308,32 @@ namespace FolderOwnerAbacus
                         {
                             MessageBox.Show(exp.Message + System.Environment.NewLine + "Please contact administrator", "Error", MessageBoxButtons.OK);
                             base.BeginInvoke(new DAddLog(this.AddLogs), new object[] { exp.Message + exp.StackTrace });
+                            btnCancel_Click(null, null);
+                            return;
                         }
                     }
 
                     objACL.ACLScore = liACLScore;
                     liACL.Add(objACL);
                 }
-
+                if (CancelProcess) return;
                 dTACLScoring = CalculateACLPercentage(liACL);
+                if (CancelProcess) return;
                 base.BeginInvoke(new DAddLog(this.AddLogs), new object[] { "Application has proccessed all the files inside your selected folder." });
             }
             catch (Exception exp)
             {
                 MessageBox.Show(exp.Message + System.Environment.NewLine + "Please contact administrator", "Error", MessageBoxButtons.OK);
                 base.BeginInvoke(new DAddLog(this.AddLogs), new object[] { exp.Message + exp.StackTrace });
+                btnCancel_Click(null, null);
+                return;
             }
+            progressBar.Value = 65;
 
             DataTable dTActivity = new DataTable();
             try
             {
+                if (CancelProcess) return;
                 dTActivity.Columns.Add("Avtar", typeof(Image));
                 dTActivity.Columns.Add("Username");
                 dTActivity.Columns.Add("FilesCount");
@@ -321,18 +350,24 @@ namespace FolderOwnerAbacus
             {
                 MessageBox.Show(exp.Message + System.Environment.NewLine + "Please contact administrator", "Error", MessageBoxButtons.OK);
                 base.BeginInvoke(new DAddLog(this.AddLogs), new object[] { exp.Message + exp.StackTrace });
+                btnCancel_Click(null, null);
+                return;
             }
-
+            progressBar.Value = 85;
             try
             {
+                if (CancelProcess) return;
                 CalculateSuggestedOwner(dTACLScoring, dTActivity);
             }
             catch (Exception exp)
             {
                 MessageBox.Show(exp.Message + System.Environment.NewLine + "Please contact administrator", "Error", MessageBoxButtons.OK);
                 base.BeginInvoke(new DAddLog(this.AddLogs), new object[] { exp.Message + exp.StackTrace });
+                btnCancel_Click(null, null);
+                return;
             }
-        }
+            progressBar.Value = 100;
+         }
 
         private DataTable SortTable(DataTable dtInput)
         {
@@ -393,7 +428,8 @@ namespace FolderOwnerAbacus
             {
 
             }
-            dgvACLScore.DataSource = dTACLScoring;
+            dgvACLScore.Invoke((MethodInvoker)delegate () { dgvACLScore.DataSource = dTACLScoring; });
+            //dgvACLScore.DataSource = dTACLScoring;
 
 			return dTACLScoring;
         }
@@ -583,6 +619,7 @@ namespace FolderOwnerAbacus
 
                 for (int i = 0; i < dTMain.Rows.Count - 1; i++)
                 {
+                    if (CancelProcess) return;
                     string Username = dTMain.Rows[i]["Username"].ToString().Trim();
                     DataRow[] drACL = dTACL.Select("Username='" + Username + "'");
                     DataRow[] drActivity = dTActivity.Select("Username='" + Username + "'");
@@ -609,6 +646,45 @@ namespace FolderOwnerAbacus
         private void tpOverview_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            CancelProcess = true;
+            btnCancel.Visible = false;
+            progressBar.Visible = false;
+            if (backgroundWorker1 != null)
+            {
+                backgroundWorker1.CancelAsync();
+                 backgroundWorker1.Dispose();
+                backgroundWorker1 = null;
+                //GC.Collect();
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            StartACLProcessing();
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (CancelProcess == true)
+            {
+                CancelProcess = false;
+                MessageBox.Show("Calculation process cancelled.", "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Calculation process completed.", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnCancel_Click(null, null);
+                CancelProcess = false;
+            }
         }
     }
     public class ACL
