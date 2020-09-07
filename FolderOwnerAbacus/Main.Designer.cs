@@ -599,7 +599,6 @@ namespace FolderOwnerAbacus
             this.tbUNCPath.Name = "tbUNCPath";
             this.tbUNCPath.Size = new System.Drawing.Size(638, 26);
             this.tbUNCPath.TabIndex = 179;
-            this.tbUNCPath.Text = "C:\\temp\\test";
             // 
             // panel8
             // 

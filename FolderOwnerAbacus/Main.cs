@@ -44,126 +44,126 @@ namespace FolderOwnerAbacus
         {
             try
             {
-                //if (tbUNCPath .Text.Trim() == string.Empty)
-                //{
-                //    MessageBox.Show("Please input UNC Path.");
-                //    tbUNCPath.Focus();
-                //    return;
-                //}
-                //if (tbDomainName.Text.Trim() == string.Empty)
-                //{
-                //    MessageBox.Show("Please input domain name.");
-                //    tbDomainName.Focus();
-                //    return;
-                //}
-                //if (tbUsername.Text.Trim() == string.Empty)
-                //{
-                //    MessageBox.Show("Please input username.");
-                //    tbUsername.Focus();
-                //    return;
-                //}
-                //if (tbPassword.Text.Trim() == string.Empty)
-                //{
-                //    MessageBox.Show("Please input password.");
-                //    tbPassword.Focus();
-                //    return;
-                //}
-                //if (txtACLTopRecords.Text.Trim() == string.Empty)
-                //{
-                //    MessageBox.Show("Please input ACL top records.");
-                //    txtACLTopRecords.Focus();
-                //    return;
-                //}
-                //if (txtActivityTopRecords.Text.Trim() == string.Empty)
-                //{
-                //    MessageBox.Show("Please input Activity top records.");
-                //    txtActivityTopRecords.Focus();
-                //    return;
-                //}
-                //if (tbReadData.Text.Trim() == string.Empty)
-                //{
-                //    MessageBox.Show("Please input Read Data.");
-                //    tbReadData.Focus();
-                //    return;
-                //}
-                //if (tbWriteData.Text.Trim() == string.Empty)
-                //{
-                //    MessageBox.Show("Please input Write Data.");
-                //    tbWriteData.Focus();
-                //    return;
-                //}
-                //if (tbCreateFiles.Text.Trim() == string.Empty)
-                //{
-                //    MessageBox.Show("Please input Create Files.");
-                //    tbCreateFiles.Focus();
-                //    return;
-                //}
-                //if (tbModify.Text.Trim() == string.Empty)
-                //{
-                //    MessageBox.Show("Please input Modify.");
-                //    tbModify.Focus();
-                //    return;
-                //}
-                //if (tbFullControl.Text.Trim() == string.Empty)
-                //{
-                //    MessageBox.Show("Please input Full Control.");
-                //    tbFullControl.Focus();
-                //    return;
-                //}
-                //if (tbCreateDirectories.Text.Trim() == string.Empty)
-                //{
-                //    MessageBox.Show("Please input Create Directories.");
-                //    tbCreateDirectories.Focus();
-                //    return;
-                //}
-                //if (tbExecuteFile.Text.Trim() == string.Empty)
-                //{
-                //    MessageBox.Show("Please input Execute Files.");
-                //    tbExecuteFile.Focus();
-                //    return;
-                //}
-                //if (tbRead.Text.Trim() == string.Empty)
-                //{
-                //    MessageBox.Show("Please input Read.");
-                //    tbRead.Focus();
-                //    return;
-                //}
-                //if (tbChangePermissions.Text.Trim() == string.Empty)
-                //{
-                //    MessageBox.Show("Please input Change Permission.");
-                //    tbChangePermissions.Focus();
-                //    return;
-                //}
-                //if (tbTakeOwnership.Text.Trim() == string.Empty)
-                //{
-                //    MessageBox.Show("Please input Take Ownership.");
-                //    tbTakeOwnership.Focus();
-                //    return;
-                //}
-                //if (tbDeleteSubdirectories.Text.Trim() == string.Empty)
-                //{
-                //    MessageBox.Show("Please input Delete Subdirectories.");
-                //    tbDeleteSubdirectories.Focus();
-                //    return;
-                //}
-                //if (tbWrite.Text.Trim() == string.Empty)
-                //{
-                //    MessageBox.Show("Please input Write.");
-                //    tbWrite.Focus();
-                //    return;
-                //}
-                //if (tbDelete.Text.Trim() == string.Empty)
-                //{
-                //    MessageBox.Show("Please input Delete.");
-                //    tbDelete.Focus();
-                //    return;
-                //}
-                //if (tbReadAndExecute.Text.Trim() == string.Empty)
-                //{
-                //    MessageBox.Show("Please input Read And Execute.");
-                //    tbReadAndExecute.Focus();
-                //    return;
-                //}
+                if (tbUNCPath.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("Please input UNC Path.");
+                    tbUNCPath.Focus();
+                    return;
+                }
+                if (tbDomainName.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("Please input domain name.");
+                    tbDomainName.Focus();
+                    return;
+                }
+                if (tbUsername.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("Please input username.");
+                    tbUsername.Focus();
+                    return;
+                }
+                if (tbPassword.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("Please input password.");
+                    tbPassword.Focus();
+                    return;
+                }
+                if (txtACLTopRecords.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("Please input ACL top records.");
+                    txtACLTopRecords.Focus();
+                    return;
+                }
+                if (txtActivityTopRecords.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("Please input Activity top records.");
+                    txtActivityTopRecords.Focus();
+                    return;
+                }
+                if (tbReadData.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("Please input Read Data.");
+                    tbReadData.Focus();
+                    return;
+                }
+                if (tbWriteData.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("Please input Write Data.");
+                    tbWriteData.Focus();
+                    return;
+                }
+                if (tbCreateFiles.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("Please input Create Files.");
+                    tbCreateFiles.Focus();
+                    return;
+                }
+                if (tbModify.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("Please input Modify.");
+                    tbModify.Focus();
+                    return;
+                }
+                if (tbFullControl.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("Please input Full Control.");
+                    tbFullControl.Focus();
+                    return;
+                }
+                if (tbCreateDirectories.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("Please input Create Directories.");
+                    tbCreateDirectories.Focus();
+                    return;
+                }
+                if (tbExecuteFile.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("Please input Execute Files.");
+                    tbExecuteFile.Focus();
+                    return;
+                }
+                if (tbRead.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("Please input Read.");
+                    tbRead.Focus();
+                    return;
+                }
+                if (tbChangePermissions.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("Please input Change Permission.");
+                    tbChangePermissions.Focus();
+                    return;
+                }
+                if (tbTakeOwnership.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("Please input Take Ownership.");
+                    tbTakeOwnership.Focus();
+                    return;
+                }
+                if (tbDeleteSubdirectories.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("Please input Delete Subdirectories.");
+                    tbDeleteSubdirectories.Focus();
+                    return;
+                }
+                if (tbWrite.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("Please input Write.");
+                    tbWrite.Focus();
+                    return;
+                }
+                if (tbDelete.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("Please input Delete.");
+                    tbDelete.Focus();
+                    return;
+                }
+                if (tbReadAndExecute.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("Please input Read And Execute.");
+                    tbReadAndExecute.Focus();
+                    return;
+                }
 
                 topACL = Convert.ToInt32(txtACLTopRecords.Text.Trim());
                 topActivity = Convert.ToInt32(txtActivityTopRecords.Text.Trim());
